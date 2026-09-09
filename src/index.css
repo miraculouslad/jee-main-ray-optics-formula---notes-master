@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* KaTeX container overflow containment & guaranteed math rendering */
+.katex-display {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-width: 100% !important;
+  padding: 6px 0 !important;
+  margin: 0.5em 0 !important;
+  text-align: center !important;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.katex {
+  max-width: 100%;
+  text-rendering: geometricPrecision;
+}
+
+/* Prevent unstyled MathML from leaking raw LaTeX symbols */
+.katex .katex-mathml {
+  display: none !important;
+}
+
+/* Custom sleek horizontal scrollbar for math equations so they never break layout */
+.custom-math-scrollbar::-webkit-scrollbar,
+.katex-display::-webkit-scrollbar,
+.katex-display-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-math-scrollbar::-webkit-scrollbar-track,
+.katex-display::-webkit-scrollbar-track,
+.katex-display-wrapper::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+}
+
+.custom-math-scrollbar::-webkit-scrollbar-thumb,
+.katex-display::-webkit-scrollbar-thumb,
+.katex-display-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.4);
+  border-radius: 4px;
+}
+
+.custom-math-scrollbar::-webkit-scrollbar-thumb:hover,
+.katex-display::-webkit-scrollbar-thumb:hover,
+.katex-display-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.8);
+}
